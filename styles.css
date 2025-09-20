@@ -1,0 +1,178 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+body {
+    font-size: 16px;
+}
+
+@media (max-width: 720px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 24px;
+        gap: 16px;
+    }
+}
+
+.main-container {
+    max-width: 1440px;      
+    margin: 0 auto;         
+    padding: 0;        
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.nav-container {
+    padding: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'PP Monument Extended';
+    font-weight: 200;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.nav-logo p{
+    display: inline;
+    font-family: 'PP Monument Extended';
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-container ul {
+    list-style: none;
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.hero-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 72px;
+    box-sizing: border-box;
+}
+
+.hero-maintext h1 {
+    font-family: 'PP Monument Extended';
+    font-weight: 800;
+    font-size: 96px;
+}
+
+.hero-maintext p {
+    font-family: 'PP Monument Extended';
+    font-weight: 400;
+    font-size: 64px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+}
+
+.hero-description {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; 
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #27ae60; 
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.status-text {
+    display: flex;
+    gap: 32px;
+}
+
+@media (max-width: 720px) {
+    .nav-container ul li a {
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    .hero-maintext h1 {
+        font-family: 'PP Monument Extended';
+        font-weight: 800;
+        font-size: 64px;
+    }
+
+    .hero-maintext p {
+        font-family: 'PP Monument Extended';
+        font-weight: 400;
+        font-size: 36px;
+    }
+    body {
+        font-size: 12px;
+    }
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+    }
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: local('PP Monument Extended Light'), local('PP-Monument-Extended-Light');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: local('PP Monument Extended Regular'), local('PP-Monument-Extended-Regular');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: local('PP Monument Extended Black'), local('PP-Monument-Extended-Black');
+    font-weight: 800;
+    font-style: normal;
+}

@@ -24,6 +24,24 @@ body {
     background: radial-gradient(circle at 50% 30%, #1a1a1a 0%, #000000 100%);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 2rem;
+    transition: 
+        transform 0.5s cubic-bezier(.4,0,.2,1),
+        box-shadow 0.3s,
+        filter 0.5s;
+}
+
+.graphics-card img:hover {
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.2);
+    transform: scale(1.01);
+}
+
 .main-container {
     max-width: 1440px;
     margin: 0 auto;           
@@ -91,6 +109,11 @@ body {
     text-decoration: none;
 }
 
+.nav-container ul li a:hover {
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
 .hero-container {
     flex: 1;
     display: flex;
@@ -104,7 +127,19 @@ body {
 .hero-maintext h1 {
     font-family: 'PP Monument Extended';
     font-weight: 800;
-    font-size: clamp(1.5rem, calc(4vw + 1rem), 6rem)
+    font-size: clamp(1.5rem, calc(4vw + 1rem), 6rem);
+    background: linear-gradient(270deg, #ff6a00, #ffb347, #43cea2, #185a9d, #ff6a00);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 8s linear infinite;
+}
+
+@keyframes gradientMove {
+    to {
+        background-position: 200%;
+    }
 }
 
 .hero-maintext p {
@@ -152,11 +187,6 @@ body {
     gap: 2rem;
 }
 
-#dev-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
 .dev-container {
     flex: 1;
     display: flex;
@@ -182,18 +212,27 @@ body {
     min-width: 0; 
     cursor: pointer;
     background: transparent;
-    border: 0.063rem solid rgba(255, 255, 255, 0.5); 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
     border-radius: 0.5rem; 
     padding: min(2em, 8%);
     display: flex;
     flex-direction: column;
-    transition: border-color 0.3s ease;
+    transition: 
+        transform 0.5s cubic-bezier(.4,0,.2,1),
+        box-shadow 0.3s,
+        filter 0.5s;
     gap: 1rem;
 }
 
 .dev-card:hover {
     border-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 3rem rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.dev-deck:hover .dev-card:not(:hover) {
+    filter: blur(1px) brightness(0.8);
+    transition: filter 0.3s;
 }
 
 .card-links, .card-header h3{
@@ -226,6 +265,52 @@ body {
     gap: 2rem; 
 }
 
+.graphics-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      
+    align-items: center;                 
+    padding: min(4.5em, 8%);
+    gap: 2rem; 
+}
+
+.graphics-header{
+    align-self: flex-start;
+}
+
+.graphics-header h2{
+    font-family: 'PP Monument Extended';
+    font-weight: 400;
+    font-size: clamp(0.25rem, calc(2vw + 1rem), 4rem)
+}
+
+.graphics-deck {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+    align-items: stretch;
+}
+
+.graphics-card {
+    flex: 1 1 0;     
+    min-width: 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.left-col, .right-col {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem; 
+}
+
+.card-header p {
+    opacity: 0.5;
+}
+
 @media (max-width: 1024px) { 
     .status-dot {
         width: 0.5rem; 
@@ -242,6 +327,9 @@ body {
         flex-direction: column;
         gap: 1rem; 
     } 
+    .left-col, .right-col {
+        flex-direction: column;
+    } 
 }
 
 @media (max-width: 600px) { 
@@ -255,6 +343,9 @@ body {
         flex-direction: column;
         gap: 2rem; 
     }
+    .left-col, .right-col {
+        gap: 1rem; 
+    } 
 }
 
 

@@ -327,21 +327,24 @@ img {
 
 @font-face {
     font-family: 'PP Monument Extended';
-    src: local('PP Monument Extended Light'), local('PP-Monument-Extended-Light');
+    src: url('assets/PP Monument Extended Light/PP Monument Extended Light.woff2') format('woff2');
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'PP Monument Extended';
-    src: local('PP Monument Extended Regular'), local('PP-Monument-Extended-Regular');
+    src: url('assets/PP Monument Extended/PP Monument Extended.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'PP Monument Extended';
-    src: local('PP Monument Extended Black'), local('PP-Monument-Extended-Black');
+    src: url('assets/PP Monument Extended Black/PP Monument Extended Black.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
+    font-display: swap;
 }

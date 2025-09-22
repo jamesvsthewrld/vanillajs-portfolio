@@ -343,7 +343,7 @@ img {
 
 @font-face {
     font-family: 'PP Monument Extended';
-    src: url('assets/PP Monument Extended Black/PP Monument Extended Black.woff2') format('woff2');
+    src: url('assets/PP Monument Extended Black/PP Monument Extended Black.otf') format('opentype');
     font-weight: 800;
     font-style: normal;
     font-display: swap;

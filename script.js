@@ -27,6 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('hide');
         }
         lastScrollY = window.scrollY;
-    });  
-});
+    });
+    const preview = document.getElementById('image-preview');
+    const previewImg = document.getElementById('preview-img');
+    document.querySelectorAll('.graphics-card img').forEach(img => {
+        img.addEventListener('click', () => {
+            previewImg.src = img.src;
+            preview.style.display = 'flex';
+        });
+    });
+    preview.addEventListener('click', () => {
+        preview.style.display = 'none';
+        previewImg.src = '';
+    });
+});      
+
 

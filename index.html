@@ -13,7 +13,8 @@
     <link rel="preload" href="assets/PP Monument Extended Black/PP Monument Extended Black.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="media.css">
-    <script src="script.js"></script>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="main-container">
@@ -186,8 +187,17 @@
         </div>
          
     </div>
-    <div id="image-preview" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
-    <img id="preview-img" src="" style="max-width:90vw; max-height:90vh; border-radius:2rem; box-shadow:0 0 2rem #000;">
-</div>
+
+    <footer class="footer">
+        <div class="footer-left">© <span id="year"></span> Jamesvsthewrld. All Rights Reserved.</div>
+        <div class="footer-right">That's all for now.</div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <div id="image-preview" src="">
+        <img id="preview-img" src="">
+    </div>
 </body>
 </html>
